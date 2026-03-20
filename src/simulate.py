@@ -15,7 +15,7 @@ def create_synthetic_frame():
     
     # Plate
     plate_clean = np.ones((100, 300, 3), dtype=np.uint8) * 255
-    cv2.putText(plate_clean, "RCA123B", (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 1.8, (0, 0, 0), 4)
+    cv2.putText(plate_clean, "RAI 851 N", (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1.6, (0, 0, 0), 4)
     cv2.rectangle(plate_clean, (0, 0), (299, 99), (0, 0, 0), 3) 
     
     # Points for perspective transform (simulating the camera angle)
@@ -62,8 +62,8 @@ def main():
             try:
                 text = extract_text(aligned)
             except Exception as e:
-                print(f"Warning - Tesseract OCR failed ({e}). Using mock OCR result 'RCA123B' for simulation.")
-                text = "RCA123B"
+                print(f"Warning - Tesseract OCR failed ({e}). Using mock OCR result 'RAI851N' for simulation.")
+                text = "RAI851N"
                 
             valid_plate = validate_plate(text)
             print(f"Detected Text: '{text}'")
