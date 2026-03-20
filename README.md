@@ -53,3 +53,7 @@ The cropped and perspective-corrected plate, ready for OCR processing.
 ### 3. OCR Result
 The OCR's string output, read directly from the aligned plate.
 ![OCR Output](screenshots/ocr.png)
+
+### Real Car Confirmation
+To verify that the pipeline was tested on a physical vehicle, the original image of the car is provided below:
+![Full Car](screenshots/full_car.jpg)
